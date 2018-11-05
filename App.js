@@ -1,22 +1,29 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View, ScrollView, FlatList } from 'react-native';
+
+import styles from './App.styles'
+import { EventList } from './Components';
 
 export default class App extends React.Component {
   render() {
+    //debugger;
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Esto es Bretico, vamos a pulsearla!</Text>
-      </View>
+      <ScrollView>
+        <View style={styles.container}>
+          <EventList />
+          <Text>Some Text</Text>
+          <FlatList
+            key="otherFL"
+            data={[{ name: 'Trying' }, { name: 'Flatlist2' }, { name: 'Component' }]}
+            renderItem={({ item }) => <Text>{item.name}</Text>}
+            keyExtractor={item => item.name}
+        />
+        </View>
+        <Text>Some Text</Text>
+        <Text>Some Text</Text>
+        <Text>Some Text</Text>
+        <Text>Some Text</Text>
+      </ScrollView>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
