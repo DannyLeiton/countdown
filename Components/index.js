@@ -1,2 +1,4 @@
 import EventList from './EventList'
-export { EventList }
+import EventForm from './EventForm'
+
+export { EventList, EventForm }
