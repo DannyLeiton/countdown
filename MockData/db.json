@@ -1,6 +1,11 @@
 {
   "events": [
     {
+      "title": "Christmas for Yana",
+      "date": "2018-12-24T18:00:00-06:00",
+      "id": "8f83346c-5e2a-410a-986c-67dcc72d3a82"
+    },
+    {
       "title": "Release Bretico App",
       "date": "2019-01-14T00:00:00-06:00",
       "id": "05dafc66-bd91-43a0-a752-4dc40f039144"
