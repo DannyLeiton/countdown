@@ -11,5 +11,11 @@ export default StackNavigator({
     navigationOptions: () => ({
       title: 'Upcoming Events'
     })
+  },
+  form: {
+    screen: EventForm,
+    navigationOptions: () => ({
+      title: 'New Event'
+    })
   }
 });
