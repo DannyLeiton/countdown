@@ -3,27 +3,68 @@
     {
       "title": "Christmas for Yana",
       "date": "2018-12-24T18:00:00-06:00",
+      "enabled": false,
       "id": "8f83346c-5e2a-410a-986c-67dcc72d3a82"
     },
     {
       "title": "Release Bretico App",
       "date": "2019-01-14T00:00:00-06:00",
+      "enabled": true,
       "id": "05dafc66-bd91-43a0-a752-4dc40f039144"
     },
     {
       "title": "Demo Bretico App Prototype",
       "date": "2018-11-19T13:45:00-06:00",
+      "enabled": true,
       "id": "001c9b6d-00a9-465c-a2d3-afb7176a0a87"
     },
     {
       "title": "Go to Argentina",
       "date": "2018-11-21T15:45:00-06:00",
+      "enabled": true,
       "id": "4cdbe78f-54df-4769-bf3b-02a930161ec5"
     },
     {
       "title": "Come back from Argentina",
       "date": "2018-11-30T05:17:00-06:00",
+      "enabled": true,
       "id": "81066e94-5e2a-410a-986c-67dcc72d3a82"
+    },
+    {
+      "title": "Bitz",
+      "date": "2018-11-08T15:24:07.000Z",
+      "enabled": true,
+      "id": "ace59960-31d7-4706-bdd6-89be02214ba2"
+    },
+    {
+      "title": "Other",
+      "date": "2018-11-08T06:25:24.000Z",
+      "enabled": false,
+      "id": "3512f55a-5e25-45e3-9858-08df6f5da44d"
+    },
+    {
+      "title": "Vence CDP",
+      "date": "2018-11-09T15:24:41.000Z",
+      "enabled": true,
+      "id": "b283e9e2-eb23-4b6d-a9b1-c8d9f63c01da"
+    },
+    {
+      "title": "Otro",
+      "date": "2018-11-12T06:39:24.000Z",
+      "enabled": false,
+      "id": "d1b6a15e-71f0-420b-9312-01ae72d8e2cd"
+    },
+    {
+      "title": "NEWONE",
+      "date": "2018-11-12T06:58:49.000Z",
+      "enabled": false,
+      "id": "6b69906a-2e1e-4f7b-a5c9-80f801ee3354"
+    },
+    {
+      "title": "Otro",
+      "date": "2018-11-10T07:25:46.000Z",
+      "enabled": false,
+      "id": "8f5cb8a8-9913-40b9-9362-234998c2da95"
     }
   ]
 }

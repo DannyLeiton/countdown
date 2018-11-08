@@ -49,5 +49,11 @@ export default styles = StyleSheet.create({
     color: '#a3a3a3',
     textAlign: 'center',
     paddingTop: 0,
+  },
+  disableActionButton: {
+    marginLeft: 20
+  },
+  disableActionText: {
+    color: '#ff0000'
   }
 });

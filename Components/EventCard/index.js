@@ -1,12 +1,12 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, TouchableHighlight } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { formatDate, getCountdownParts } from '../../api';
+import { formatDate, getCountdownParts, disableEvent } from '../../api';
 import styles from './styles'
 
 
-export default function EventCard({ event }) {
+export default function EventCard({ event, showIndicator }) {
   const {
     days,
     hours,
@@ -14,11 +14,25 @@ export default function EventCard({ event }) {
     seconds,
   } = getCountdownParts(event.date);
 
+  //if(showIndicator = 'disabled') event.enabled = !event.enabled;
+
+  _handleDisablePress = () => {
+    disableEvent({ ...event })
+        .then(() => {});
+  }
+
   return (
+    event.enabled &&
     <View style={styles.card}>
       <View style={styles.cardHeader}>
         <Text style={styles.date}>{formatDate(event.date)}</Text>
         <Text style={styles.title}>{event.title}</Text>
+        <TouchableHighlight
+          style={styles.disableActionButton}
+          onPress = {this._handleDisablePress}
+        >
+          <Text style={styles.disableActionText}>Disable</Text>
+        </TouchableHighlight>
       </View>
 
       <View
@@ -56,6 +70,8 @@ export default function EventCard({ event }) {
 EventCard.propTypes = {
   event: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    date: PropTypes.instanceOf(Date)
+    date: PropTypes.instanceOf(Date),
+    enabled: PropTypes.bool.isRequired,
+    id: PropTypes.string.isRequired,
   }),
 };

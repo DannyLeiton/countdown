@@ -16,6 +16,9 @@
     "eject": "expo eject",
     "test": "jest"
   },
+  "jest": {
+    "preset": "jest-expo"
+  },
   "dependencies": {
     "expo": "^30.0.1",
     "graceful-fs": "4.1.11",
