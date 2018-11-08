@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, ScrollView, FlatList, YellowBox } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
-import { EventList, EventForm } from './Components';
+import { EventList, EventForm, DisabledEvents } from './Components';
 import styles from './App.styles'
 
 YellowBox.ignoreWarnings([
@@ -21,5 +21,11 @@ export default StackNavigator({
     navigationOptions: () => ({
       title: 'New Event'
     })
-  }
+  }/*,
+  disabled: {
+    screen: DisabledEvents,
+    navigationOptions: () => ({
+      title: 'Disabled Events'
+    })
+  },*/
 });

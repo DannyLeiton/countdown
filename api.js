@@ -26,6 +26,7 @@ export function postEvent({ title, date }) {
     body: JSON.stringify({
       title,
       date,
+      enabled: true,
       id: uuid()
     }),
     headers: new Headers({
@@ -33,7 +34,23 @@ export function postEvent({ title, date }) {
     })
   })
   .then(response => response.json())
-  .catch(error => console.error(`An error ocurred while post the event: ${error, title, date}`));
+  .catch(error => console.error(`An error ocurred while posting the event: ${error, title, date}`));
+}
+
+export function disableEvent({title, date, id}) {
+  return fetch(`${url}/events/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify({
+      title,
+      date,
+      enabled: false
+    }),
+    headers: new Headers({
+      'Content-Type': 'application/json'
+    })
+  })
+  .then(response => response.json())
+  .catch(error => console.error(`An error ocurred while disabling the event: ${error, id}`));
 }
 
 export function formatDateTime(dateString) {

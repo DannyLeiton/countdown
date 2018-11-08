@@ -11,7 +11,7 @@ import EventCard from '../EventCard';
 
 import styles from './styles'
 
-class EventList extends Component {
+class DisabledEvents extends Component {
   state = {
     events: [],
   }
@@ -42,24 +42,19 @@ class EventList extends Component {
   render() {
     return [
       <FlatList
-        key="flatlist"
+        key="disabledFlatlist"
         data={this.state.events}
         style={styles.list}
         keyExtractor={item => item.id}
         renderItem={({ item }) => (
           <EventCard
+            showIndicator={'disabled'}
             event={item}
-            showIndicator = 'enabled'
           />
         )}
-      />,
-      <ActionButton
-          key="newEventButton"
-          onPress={this._handleAddEvent}
-          buttonColor="rgba(231, 76, 60, 1)"
       />
     ];
   }
 }
 
-export default EventList;
+export default DisabledEvents;
