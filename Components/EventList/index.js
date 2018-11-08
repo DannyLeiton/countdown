@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 import { FlatList } from 'react-native';
 import ActionButton from 'react-native-action-button';
 
-import mockData from '../../MockData'
+//import mockData from '../../MockData' Not needed now that we have an api
+
+import { getEvents } from '../../api';
 
 import EventCard from '../EventCard';
 
@@ -24,12 +26,7 @@ class EventList extends Component {
       });
     }, 1000);
 
-    const events = mockData.events.map(e => ({
-      ...e,
-      date: new Date(e.date),
-    }));
-    events.sort((a, b) => { return a.date - b.date }) // Descending order
-    this.setState({ events });
+    getEvents().then(events => this.setState({ events }));
   }
 
   _handleAddEvent = () => {
