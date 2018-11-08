@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import { FlatList } from 'react-native';
+import ActionButton from 'react-native-action-button';
 
 import mockData from '../../MockData'
 
@@ -31,9 +32,12 @@ class EventList extends Component {
     this.setState({ events });
   }
 
+  _handleAddEvent = () => {
+    this.props.navigation.navigate('form');
+  }
 
   render() {
-    return (
+    return [
       <FlatList
         key="flatlist"
         data={this.state.events}
@@ -44,8 +48,13 @@ class EventList extends Component {
             event={item}
           />
         )}
+      />,
+      <ActionButton
+          key="ActionB"
+          onPress={this._handleAddEvent}
+          buttonColor="rgba(231, 76, 60, 1)"
       />
-    );
+    ];
   }
 }
 
